@@ -1,0 +1,18 @@
+object CaptureForm: TCaptureForm
+  Cursor = crCross
+  Left = 726
+  Height = 240
+  Top = 238
+  Width = 320
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'CaptureForm'
+  FormStyle = fsSystemStayOnTop
+  OnClick = FormClick
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnMouseMove = FormMouseMove
+  OnPaint = FormPaint
+  LCLVersion = '1.5'
+  WindowState = wsFullScreen
+end
