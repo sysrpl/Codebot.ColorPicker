@@ -1,17 +1,16 @@
 unit CaptureFrm;
 
 {$mode delphi}
+{$WARN 5024 off : Parameter "$1" not used}
 
 interface
-
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, StdCtrls,
   LCLIntf, LCLType, ExtCtrls, CaptureCtrls,
   Codebot.System,
-  Codebot.Input.Hotkeys,
   Codebot.Graphics,
-  Codebot.Graphics.Types,
-  Codebot.Graphics.Extras;
+  Codebot.Controls.Extras,
+  Codebot.Graphics.Types; //Codebot.Graphics.Extras;
 
 { TCaptureForm }
 
@@ -20,12 +19,14 @@ type
     procedure FormClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure FormPaint(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure FormShow(Sender: TObject);
   private
     FBitmap: TBitmap;
     FZoom: TCaptureZoom;
-    procedure Hotkey(Sender: TObject; Key: Word; Shift: TShiftState);
     function GetPick: TColorB;
     property Pick: TColorB read GetPick;
   end;
@@ -61,12 +62,6 @@ begin
   end;
 end;
 
-procedure TCaptureForm.Hotkey(Sender: TObject; Key: Word; Shift: TShiftState);
-begin
-  if Key = VK_ESCAPE then
-    ModalResult := mrCancel;
-end;
-
 procedure TCaptureForm.FormCreate(Sender: TObject);
 begin
   Left := 0;
@@ -81,13 +76,28 @@ begin
   with Mouse.CursorPos do
     FZoom.ZoomTo(X, Y, FBitmap);
   FZoom.Top := FBitmap.Height - FZoom.Height - 10;
-  HotkeyCapture.RegisterNotify(VK_ESCAPE, [], Hotkey);
 end;
 
 procedure TCaptureForm.FormDestroy(Sender: TObject);
 begin
-  HotkeyCapture.UnregisterNotify(VK_ESCAPE, []);
   FBitmap.Free;
+end;
+
+procedure TCaptureForm.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_ESCAPE then
+    ModalResult := mrCancel;
+end;
+
+procedure TCaptureForm.FormKeyPress(Sender: TObject; var Key: char);
+begin
+
+end;
+
+procedure TCaptureForm.FormShow(Sender: TObject);
+begin
+  WindowState := wsFullScreen;
 end;
 
 procedure TCaptureForm.FormClick(Sender: TObject);

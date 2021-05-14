@@ -32,7 +32,6 @@ type
       Index: Integer; Rect: TRectI; State: TDrawState);
     procedure ColorListSelectItem(Sender: TObject);
     procedure EyeDropButtonClick(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure HuePickerDblClick(Sender: TObject);
@@ -45,10 +44,6 @@ type
     procedure ActionCapture;
     procedure ActionShow;
     function GetColorText: string;
-    procedure Hotkey(Sender: TObject; Key: Word; Shift: TShiftState);
-    procedure ReceiveMessage(const Message: string);
-    procedure AppDeactivated(Sender: TObject);
-    procedure AppQueryEndSession(var Cancel: Boolean);
   private
     FCanClose: Boolean;
     FColors: TColorList;
@@ -164,27 +159,6 @@ begin
   Close;
 end;
 
-procedure TMainForm.Hotkey(Sender: TObject; Key: Word; Shift: TShiftState);
-begin
-  if Key = VK_LCL_TILDE then
-    if ssCtrl in Shift then
-      ActionShow
-    else if ssSuper in Shift then
-      ActionCapture
-    else if ssAlt in Shift then
-      ActionClose;
-end;
-
-procedure TMainForm.ReceiveMessage(const Message: string);
-begin
-  if Message = 'show' then
-    ActionShow
-  else if Message = 'capture' then
-    ActionCapture
-  else if Message = 'close' then
-    ActionClose;
-end;
-
 type
   TShapeHack = class(TShape) public property OnDblClick; end;
 
@@ -192,58 +166,25 @@ procedure TMainForm.FormCreate(Sender: TObject);
 var
   P: TPointI;
 begin
-  HotkeyCapture.RegisterNotify(VK_LCL_TILDE, [ssCtrl], Hotkey);
-  HotkeyCapture.RegisterNotify(VK_LCL_TILDE, [ssSuper], Hotkey);
-  Application.OnDeactivate := AppDeactivated;
-  Application.OnQueryEndSession := AppQueryEndSession;
-  UniqueInstance.OnMessage := ReceiveMessage;
+  FHtmlColor := True;
   ClientWidth := ColorList.Left + ColorList.Width + 8;
   ClientHeight := ColorShape.Top + ColorShape.Height + 8;
   P := DefaultPosition;
   Left := P.X;
   Top := P.Y;
-  TShapeHack(ColorShape).OnDblClick := ColorEditDblClick;
+  TShapeHack(Pointer(ColorShape)).OnDblClick := ColorEditDblClick;
   BuildCommonColors(FColors);
   FFont := NewFont(Font);
   FFont.Quality := fqCleartype;
   ColorList.Count := FColors.Length;
 end;
 
-procedure TMainForm.AppDeactivated(Sender: TObject);
-begin
-  if CaptureForm <> nil then
-    CaptureForm.ModalResult := mrCancel;
-end;
-
-procedure TMainForm.AppQueryEndSession(var Cancel: Boolean);
-begin
-  if CaptureForm <> nil then
-    CaptureForm.ModalResult := mrCancel;
-  FCanClose := True;
-  Cancel := False;
-end;
-
 procedure TMainForm.FormShow(Sender: TObject);
 begin
-  { The first time we show the mainform align a few controls }
-  if Tag > 0 then
-    Exit;
-  Tag := 1;
+  OnShow := nil;
   ColorEdit.Top := ColorShape.Top + (ColorShape.Height - ColorEdit.Height) div 2;
   SelectBox.Top := ColorShape.Top + (ColorShape.Height - SelectBox.Height) div 2;
-  if SwitchExists('hide') then
-    Hide;
 end;
-
-procedure TMainForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
-begin
-  { Keep the programming in the background }
-  if FCanClose then
-    CloseAction := caFree
-  else
-    CloseAction := caHide;
-end;
-
 procedure TMainForm.ColorEditDblClick(Sender: TObject);
 begin
   FHtmlColor := not FHtmlColor;

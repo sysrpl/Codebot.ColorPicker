@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectSession>
-    <Version Value="9"/>
-    <BuildModes Active="linux-i386"/>
-    <Units Count="39">
+    <Version Value="12"/>
+    <BuildModes Count="1" Active="Release">
+      <Item1 Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <Target>
+            <Filename Value="colormix"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <SyntaxMode Value="Delphi"/>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf2Set"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item1>
+    </BuildModes>
+    <Units Count="41">
       <Unit0>
         <Filename Value="colormix.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="31" Y="2"/>
-        <UsageCount Value="50"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="16" Y="15"/>
+        <UsageCount Value="70"/>
         <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -19,10 +61,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Main"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="199"/>
-        <CursorPos X="49" Y="203"/>
-        <UsageCount Value="50"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="3" Y="143"/>
+        <UsageCount Value="70"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
@@ -34,20 +75,23 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="CaptureFrm"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="49"/>
-        <CursorPos X="26" Y="75"/>
-        <UsageCount Value="47"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="52"/>
+        <CursorPos X="3" Y="100"/>
+        <UsageCount Value="67"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit2>
       <Unit3>
         <Filename Value="capturectrls.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CaptureCtrls"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="13"/>
-        <CursorPos Y="13"/>
-        <UsageCount Value="43"/>
+        <CursorPos X="3" Y="15"/>
+        <UsageCount Value="63"/>
+        <Loaded Value="True"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit3>
       <Unit4>
@@ -56,7 +100,7 @@
         <UnitName Value="ColorListings"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="66" Y="16"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="56"/>
         <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit4>
       <Unit5>
@@ -64,20 +108,23 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="27"/>
         <CursorPos X="24" Y="48"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit5>
       <Unit6>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.graphics.types.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="410"/>
         <CursorPos X="18" Y="431"/>
-        <UsageCount Value="14"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit6>
       <Unit7>
         <Filename Value="../../../../Base/lazarus/lcl/graphics.pp"/>
         <UnitName Value="Graphics"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit7>
       <Unit8>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.graphics.pas"/>
@@ -85,7 +132,8 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="426"/>
         <CursorPos X="3" Y="428"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit8>
       <Unit9>
         <Filename Value="../../../../Base/lazarus/lcl/lresources.pp"/>
@@ -93,49 +141,56 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5292"/>
         <CursorPos X="34" Y="5301"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit9>
       <Unit10>
         <Filename Value="../../../../Base/lazarus/lcl/include/icon.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="653"/>
         <CursorPos Y="676"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit10>
       <Unit11>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.controls.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="437"/>
         <CursorPos X="44" Y="408"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit11>
       <Unit12>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.controls.extras.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="495"/>
         <CursorPos X="56" Y="530"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit12>
       <Unit13>
         <Filename Value="../../../../Base/fpc/rtl/inc/resh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="43"/>
         <CursorPos X="10" Y="64"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit13>
       <Unit14>
         <Filename Value="../../../../Base/lazarus/lcl/include/graphic.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="41"/>
         <CursorPos X="3" Y="43"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit14>
       <Unit15>
         <Filename Value="../../../../Base/lazarus/lcl/include/cursorimage.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="38"/>
         <CursorPos X="33" Y="49"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit15>
       <Unit16>
         <Filename Value="../../../../Base/lazarus/lcl/lcltype.pp"/>
@@ -143,13 +198,15 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="602"/>
         <CursorPos X="3" Y="401"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit16>
       <Unit17>
         <Filename Value="../../../../Base/lazarus/lcl/controls.pp"/>
         <UnitName Value="Controls"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit17>
       <Unit18>
         <Filename Value="../../../../Base/lazarus/lcl/forms.pp"/>
@@ -157,20 +214,23 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1474"/>
         <CursorPos X="15" Y="1426"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit18>
       <Unit19>
         <Filename Value="../../../../Base/lazarus/lcl/include/control.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="5257"/>
         <CursorPos X="3" Y="5313"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit19>
       <Unit20>
         <Filename Value="../../../../Base/fpc/rtl/objpas/types.pp"/>
         <UnitName Value="Types"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit20>
       <Unit21>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.graphics.extras.pas"/>
@@ -178,30 +238,32 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="3"/>
         <CursorPos Y="16"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit21>
       <Unit22>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.text.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="82"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit22>
       <Unit23>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.system.pas"/>
         <UnitName Value="Codebot.System"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="2842"/>
         <CursorPos X="45" Y="2865"/>
-        <UsageCount Value="15"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="13"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit23>
       <Unit24>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.text.xml.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="109"/>
         <CursorPos X="10" Y="130"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit24>
       <Unit25>
         <Filename Value="../../../../Base/lazarus/components/lazutils/fileutil.pas"/>
@@ -209,46 +271,53 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="51"/>
         <CursorPos Y="72"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit25>
       <Unit26>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.input.mousemonitor.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="17"/>
         <CursorPos X="15" Y="38"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit26>
       <Unit27>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.unique.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="78"/>
         <CursorPos Y="107"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit27>
       <Unit28>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.collections.pas"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="19"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit28>
       <Unit29>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.inc"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit29>
       <Unit30>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.networking.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="102"/>
         <CursorPos X="22" Y="137"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit30>
       <Unit31>
         <Filename Value="../../../../Base/lazarus/lcl/include/application.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="352"/>
         <CursorPos X="3" Y="361"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit31>
       <Unit32>
         <Filename Value="../../../../Base/lazarus/lcl/interfacebase.pp"/>
@@ -256,26 +325,30 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="127"/>
         <CursorPos X="15" Y="148"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit32>
       <Unit33>
         <Filename Value="../../../../Base/fpc/packages/gtk2/src/gtk+/gtk/gtkwindow.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="206"/>
         <CursorPos X="11" Y="227"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit33>
       <Unit34>
         <Filename Value="../../../../Base/fpc/packages/gtk2/src/gtk+/gtk/gtkwidget.inc"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="4" Y="5"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit34>
       <Unit35>
         <Filename Value="../../../../Base/fpc/packages/gtk2/src/gtk+/gdk/gdkdrawable.inc"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="4" Y="9"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit35>
       <Unit36>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.input.hotkeys.pas"/>
@@ -283,14 +356,16 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="499"/>
         <CursorPos Y="537"/>
-        <UsageCount Value="12"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit36>
       <Unit37>
         <Filename Value="../../../../Base/fpc/rtl/objpas/classes/classesh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="6"/>
         <CursorPos X="16" Y="27"/>
-        <UsageCount Value="11"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit37>
       <Unit38>
         <Filename Value="../../../Libraries/Cross.Codebot/source/codebot.graphics.linux.surfacecairo.pas"/>
@@ -298,73 +373,161 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2284"/>
         <CursorPos X="3" Y="2307"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
       </Unit38>
+      <Unit39>
+        <Filename Value="../../../../Libraries/cross.codebot/source/codebot_controls/codebot.controls.extras.pas"/>
+        <UnitName Value="Codebot.Controls.Extras"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="51" Y="12"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="../../../../Libraries/cross.codebot/source/codebot/codebot.graphics.pas"/>
+        <UnitName Value="Codebot.Graphics"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="1837"/>
+        <CursorPos X="3" Y="1843"/>
+        <UsageCount Value="14"/>
+        <Loaded Value="True"/>
+      </Unit40>
     </Units>
-    <JumpHistory Count="13" HistoryIndex="12">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="main.pas"/>
-        <Caret Line="95" Column="18" TopLine="67"/>
+        <Caret Line="35" TopLine="35"/>
       </Position1>
       <Position2>
         <Filename Value="main.pas"/>
-        <Caret Line="248" TopLine="236"/>
+        <Caret Line="48" TopLine="35"/>
       </Position2>
       <Position3>
         <Filename Value="main.pas"/>
-        <Caret Line="101" Column="15" TopLine="93"/>
+        <Caret Line="288" Column="16" TopLine="279"/>
       </Position3>
       <Position4>
         <Filename Value="main.pas"/>
-        <Caret Line="121" Column="37"/>
+        <Caret Line="170" Column="16" TopLine="166"/>
       </Position4>
       <Position5>
         <Filename Value="main.pas"/>
-        <Caret Line="96" Column="3" TopLine="58"/>
+        <Caret Line="53" Column="14" TopLine="36"/>
       </Position5>
       <Position6>
         <Filename Value="main.pas"/>
-        <Caret Line="155" TopLine="136"/>
+        <Caret Line="78" Column="3" TopLine="76"/>
       </Position6>
       <Position7>
         <Filename Value="main.pas"/>
-        <Caret Line="96" Column="15" TopLine="70"/>
+        <Caret Line="170" Column="15" TopLine="153"/>
       </Position7>
       <Position8>
         <Filename Value="main.pas"/>
-        <Caret Line="97" Column="3" TopLine="62"/>
+        <Caret Line="183" TopLine="166"/>
       </Position8>
       <Position9>
-        <Filename Value="main.pas"/>
-        <Caret Line="94" Column="37" TopLine="73"/>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="72" Column="45" TopLine="39"/>
       </Position9>
       <Position10>
-        <Filename Value="main.pas"/>
-        <Caret Line="243" TopLine="201"/>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="89" TopLine="60"/>
       </Position10>
       <Position11>
-        <Filename Value="main.pas"/>
-        <Caret Line="71" Column="44" TopLine="51"/>
+        <Filename Value="capturefrm.pas"/>
       </Position11>
       <Position12>
-        <Filename Value="main.pas"/>
-        <Caret Line="197" TopLine="177"/>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="11"/>
       </Position12>
       <Position13>
-        <Filename Value="main.pas"/>
-        <Caret Line="195" TopLine="177"/>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="28"/>
       </Position13>
+      <Position14>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="22" Column="48" TopLine="15"/>
+      </Position14>
+      <Position15>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="79" TopLine="62"/>
+      </Position15>
+      <Position16>
+        <Filename Value="capturefrm.pas"/>
+      </Position16>
+      <Position17>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="79" TopLine="62"/>
+      </Position17>
+      <Position18>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="22"/>
+      </Position18>
+      <Position19>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="78" TopLine="61"/>
+      </Position19>
+      <Position20>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="83" Column="69" TopLine="63"/>
+      </Position20>
+      <Position21>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="24"/>
+      </Position21>
+      <Position22>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="77" Column="4" TopLine="62"/>
+      </Position22>
+      <Position23>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="93" Column="3" TopLine="63"/>
+      </Position23>
+      <Position24>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="95" Column="19" TopLine="62"/>
+      </Position24>
+      <Position25>
+        <Filename Value="capturefrm.pas"/>
+        <Caret Line="100" Column="3" TopLine="52"/>
+      </Position25>
+      <Position26>
+        <Filename Value="../../../../Libraries/cross.codebot/source/codebot/codebot.graphics.pas"/>
+        <Caret Line="243" Column="19" TopLine="226"/>
+      </Position26>
+      <Position27>
+        <Filename Value="colormix.lpr"/>
+        <Caret Line="15" Column="16"/>
+      </Position27>
+      <Position28>
+        <Filename Value="main.pas"/>
+        <Caret TopLine="19"/>
+      </Position28>
+      <Position29>
+        <Filename Value="main.pas"/>
+        <Caret Line="226" Column="3" TopLine="212"/>
+      </Position29>
+      <Position30>
+        <Filename Value="main.pas"/>
+        <Caret Line="44" Column="15" TopLine="27"/>
+      </Position30>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
   <Debugging>
-    <BreakPoints Count="1">
-      <Item1>
+    <BreakPoints>
+      <Item>
         <Kind Value="bpkSource"/>
         <WatchScope Value="wpsLocal"/>
         <WatchKind Value="wpkWrite"/>
         <Source Value="../../../../Base/lazarus/lcl/include/icon.inc"/>
         <Line Value="1337"/>
-      </Item1>
+      </Item>
     </BreakPoints>
   </Debugging>
 </CONFIG>

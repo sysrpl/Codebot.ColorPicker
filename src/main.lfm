@@ -8,17 +8,15 @@ object MainForm: TMainForm
   Caption = 'Color Mixer'
   ClientHeight = 407
   ClientWidth = 622
-  OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
-  LCLVersion = '1.5'
+  Visible = True
   object HuePicker: THuePicker
     Left = 8
     Height = 200
     Top = 8
     Width = 200
     SaturationPicker = SaturationPicker
-    Hue = 0
     OnDblClick = HuePickerDblClick
   end
   object SaturationPicker: TSaturationPicker
@@ -26,9 +24,6 @@ object MainForm: TMainForm
     Height = 168
     Top = 24
     Width = 168
-    Hue = 0
-    Saturation = 0
-    Lightness = 0
     Style = ssSaturate
     OnChange = SaturationPickerChange
     OnDblClick = SaturationPickerDblClick
@@ -41,7 +36,7 @@ object MainForm: TMainForm
   end
   object ColorEdit: TEdit
     Left = 48
-    Height = 29
+    Height = 27
     Top = 216
     Width = 160
     OnDblClick = ColorEditDblClick
@@ -65,7 +60,7 @@ object MainForm: TMainForm
   end
   object SelectBox: TComboBox
     Left = 216
-    Height = 27
+    Height = 26
     Top = 216
     Width = 192
     ItemHeight = 0
@@ -166,7 +161,7 @@ object MainForm: TMainForm
     Enabled = False
     Interval = 250
     OnTimer = MoveTimerTimer
-    left = 48
-    top = 248
+    Left = 88
+    Top = 272
   end
 end
